@@ -2,7 +2,7 @@ import "react-app-polyfill/ie11"; // For IE 11 support
 import "react-app-polyfill/stable";
 import "./polyfill";
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import WebPage from "./routes/Router";
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -32,11 +32,11 @@ if (localStorage.getItem("theme") === "dark") {
 let persistor = persistStore(store);
 window.debounceTimer = null;
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <WebPage />
     </PersistGate>
-  </Provider>,
-  document.getElementById("root")
+  </Provider>
 );
