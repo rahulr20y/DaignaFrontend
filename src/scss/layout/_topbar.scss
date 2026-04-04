@@ -1,8 +1,16 @@
 #bottombar-nav,
 #topbar-nav {
 	height: 56px;
-	background-color: $white;
+	background-color: rgba($white, 0.8) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark #topbar-nav {
+	background-color: rgba($bg-dark, 0.8) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #bottombar-nav::before,

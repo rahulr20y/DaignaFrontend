@@ -10,8 +10,10 @@ import {
 } from "../../../common";
 import { Editor, EditorState, convertToRaw } from "draft-js";
 import "draft-js/dist/Draft.css";
+import { useTranslation } from "react-i18next";
 
 function Createpost(props) {
+  const { t } = useTranslation();
   const [editorState, setEditorState] = React.useState(() =>
     EditorState.createEmpty()
   );
@@ -41,10 +43,10 @@ function Createpost(props) {
         console.log(res);
         if (res.status === 200) {
           props.setPost(res.data.data);
-          showAlertMessage("Posted successfully", "success");
+          showAlertMessage(t("Posted successfully"), "success");
           //editorState.clear();
         } else {
-          showAlertMessage(res.data.message, "danger");
+          showAlertMessage(res.data.message || t("Error creating post"), "danger");
         }
         setAddLoading(false);
       },
@@ -71,14 +73,16 @@ function Createpost(props) {
                 modal.show();
               }}
             >
-              <a class="user-avatar me-2">
+              <a className="user-avatar me-2">
                 <img
                   src="https://cdn.vox-cdn.com/thumbor/JgCPp2BBxETY596wCp50ccosCfE=/0x0:2370x1574/1200x800/filters:focal(996x598:1374x976)/cdn.vox-cdn.com/uploads/chorus_image/image/68870438/Screen_Shot_2020_07_21_at_9.38.25_AM.0.png"
                   alt="user"
-                  class="thumb-xs rounded"
+                  className="thumb-sm rounded-circle"
                 />
               </a>
-              <div className="fs-5 mx-2 fw-lighter">Create a Post...</div>
+              <div className="flex-grow-1 bg-light p-2 px-3 rounded-pill text-muted border">
+                {t("What's on your mind?")}
+              </div>
             </div>
           </>
         }

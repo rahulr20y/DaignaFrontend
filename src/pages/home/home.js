@@ -3,10 +3,13 @@ import { connect } from "react-redux";
 import Leftbar from "../../common/layout/leftbar";
 import Createpost from "./component/createpost";
 import { Editor, EditorState, convertToRaw } from "draft-js";
-import { API, links, showAlertMessage } from "../../common/index";
+import { API, links, showAlertMessage, Spinner } from "../../common/index";
+import { useTranslation } from "react-i18next";
 import Post from "./../post/post";
+import SkeletonPost from "../post/SkeletonPost";
 
 function Home(props) {
+  const { t } = useTranslation();
   const [posts, setPosts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
 
@@ -18,9 +21,9 @@ function Home(props) {
       callback: (res) => {
         if (res.status === 200) {
           setPosts(res.data);
-          showAlertMessage("Posts fetched successfully", "success");
+          // showAlertMessage(t("Posts fetched successfully"), "success");
         } else {
-          showAlertMessage(res.data.message, "danger");
+          showAlertMessage(res.data.message || t("Error fetching posts"), "danger");
         }
         setLoading(false);
       },
@@ -41,9 +44,9 @@ function Home(props) {
         console.log(res);
         if (res.status === 200) {
           setPosts(posts.filter((post) => post.post.contentid !== postid));
-          showAlertMessage("Post Deleted successfully", "success");
+          showAlertMessage(t("Post Deleted successfully"), "success");
         } else {
-          showAlertMessage(res.data.message, "danger");
+          showAlertMessage(res.data.message || t("Error deleting post"), "danger");
         }
       },
     });
@@ -53,7 +56,11 @@ function Home(props) {
     <div>
       <Createpost setPost={setPost} />
       {loading ? (
-        <>Loading...</>
+        <div className="py-2">
+          <SkeletonPost />
+          <SkeletonPost />
+          <SkeletonPost />
+        </div>
       ) : (
         <div>
           {posts.length > 0 ? (
@@ -69,7 +76,10 @@ function Home(props) {
               );
             })
           ) : (
-            <div className="text-muted text-center">No Posts Found !!!</div>
+            <div className="text-muted text-center p-4">
+              <i className="bi bi-chat-dots font-30 d-block mb-3"></i>
+              {t("No Posts Found !!!")}
+            </div>
           )}
         </div>
       )}

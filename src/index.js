@@ -24,6 +24,11 @@ import("node-waves/dist/waves.min.js").then(() => {
   window.Waves.init();
 });
 
+// THEME INITIALIZATION
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
 let persistor = persistStore(store);
 window.debounceTimer = null;
 

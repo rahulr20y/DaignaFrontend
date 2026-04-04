@@ -6,5 +6,11 @@
   "Profile": "Profile",
   "Feedback": "Feedback",
   "Family": "Family",
-  "About": "About"
+  "About": "About",
+  "Error fetching posts": "Error fetching posts",
+  "Post Deleted successfully": "Post Deleted successfully",
+  "No Posts Found !!!": "No Posts Found !!!",
+  "What's on your mind?": "What's on your mind?",
+  "Posted successfully": "Posted successfully",
+  "Error creating post": "Error creating post"
 }

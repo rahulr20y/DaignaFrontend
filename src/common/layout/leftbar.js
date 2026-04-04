@@ -18,16 +18,15 @@ function Leftbar() {
                 key={item.to}
                 to={item.to}
                 className={classnames(
-                  "d-flex align-items-center mb-3 text-decoration-none h-100 px-3",
+                  "d-flex align-items-center mb-1 text-decoration-none h-100 px-3 py-2 rounded-pill",
                   {
-                    "text-dark fw-bold border rounded":
+                    "bg-soft-primary fw-bold text-primary":
                       location.pathname === item.to,
-                    "text-muted hover:text-gray-700":
-                      location.pathname !== item.to,
+                    "text-muted": location.pathname !== item.to,
                   }
                 )}
               >
-                <i className={"me-3 font-22 bi bi-" + item.icon} />
+                <i className={"me-3 font-18 bi bi-" + item.icon} />
                 <span> {item.name} </span>
               </NavLink>
             );

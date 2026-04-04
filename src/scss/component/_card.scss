@@ -1,23 +1,35 @@
 .card {
-	margin-bottom: 16px;
-	background-color: $card-bg;
-	border: 1px solid $border;
+	margin-bottom: 24px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 12px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+
 	.card-header {
-		background-color: $card-bg;
-		border-bottom: 1px solid $border;
+		background-color: transparent;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		padding: 1.25rem;
 		&:first-child {
-			border-radius: calc(0.5rem - 1px) calc(0.5rem - 1px) 0 0;
+			border-radius: 12px 12px 0 0;
 		}
 	}
+	.card-body {
+		padding: 1.25rem;
+	}
 	.card-footer {
-		background-color: $card-bg;
-		border-top: 1px dashed $border;
+		background-color: transparent;
+		border-top: 1px solid rgba(0, 0, 0, 0.05);
+		padding: 0.75rem 1.25rem;
 	}
 }
 
 // Dark Mode Overrides
 body.dark .card {
 	background-color: $card-bg-dark;
-	border: $card-border-width solid $card-border-dark;
+	border: 1px solid rgba(255, 255, 255, 0.05);
 	color: $card-text-dark;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }

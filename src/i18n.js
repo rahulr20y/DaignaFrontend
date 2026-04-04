@@ -5,6 +5,7 @@ import Backend from "i18next-http-backend";
 import eng from "./assets/translations/en.json";
 import hin from "./assets/translations/hi.json";
 import guj from "./assets/translations/gj.json";
+import bho from "./assets/translations/bh.json";
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
@@ -19,6 +20,9 @@ const resources = {
   },
   gj: {
     translation: guj,
+  },
+  bh: {
+    translation: bho,
   },
 };
 

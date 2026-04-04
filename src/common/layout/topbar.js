@@ -15,7 +15,23 @@ function Topbar(props) {
     { name: "English", code: "en" },
     { name: "Hindi", code: "hi" },
     { name: "Gujrati", code: "gj" },
+    { name: "Bhojpuri", code: "bh" },
   ]);
+  const [isDark, setIsDark] = useState(
+    document.body.classList.contains("dark")
+  );
+
+  const toggleDarkMode = () => {
+    const newDark = !isDark;
+    setIsDark(newDark);
+    if (newDark) {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
   const { t, i18n } = useTranslation();
 
   return (
@@ -97,6 +113,17 @@ function Topbar(props) {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="d-flex align-items-center mx-2">
+            <a
+              className="waves-effect waves-light nav-user"
+              role="button"
+              onClick={toggleDarkMode}
+              style={{ cursor: "pointer" }}
+            >
+              <i className={classnames("bi", isDark ? "bi-sun" : "bi-moon")}></i>
+            </a>
           </div>
 
           <div className="dropdown d-flex align-items-center ms-2">

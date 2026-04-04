@@ -6,5 +6,11 @@
   "Profile": "Profile",
   "Feedback": "Feedback",
   "Family": "Family",
-  "About": "About"
+  "About": "के बारे में",
+  "Error fetching posts": "पोस्ट प्राप्त करने में त्रुटि",
+  "Post Deleted successfully": "पोस्ट सफलतापूर्वक हटा दी गई",
+  "No Posts Found !!!": "कोई पोस्ट नहीं मिली !!!",
+  "What's on your mind?": "आपके मन में क्या है?",
+  "Posted successfully": "सफलतापूर्वक पोस्ट किया गया",
+  "Error creating post": "पोस्ट बनाने में त्रुटि"
 }
