@@ -1,0 +1,172 @@
+* {
+	transition: 50ms ease;
+}
+.dropdown-toggle::after {
+	display: none;
+}
+
+.dropdown-menu {
+	box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px;
+	border: 1px solid rgba($secondary, 0.15);
+}
+
+/* Dastone Page titles */
+
+.title-text,
+.card-title {
+	text-transform: capitalize;
+	letter-spacing: 0.02em;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0;
+	color: $header-title;
+	text-shadow: 0 0 1px rgba($gray-200, 0.1);
+	font-family: inherit;
+}
+.page-title-box {
+	padding: 16px 0;
+	.page-title {
+		font-size: 17px;
+		margin: 0;
+		color: $gray-800;
+		font-weight: 500;
+		line-height: 18px;
+	}
+
+	.breadcrumb {
+		font-size: 12px;
+		margin-bottom: 0;
+		font-weight: 500;
+		font-family: $font-secondary;
+		padding: 2px 0;
+		background-color: transparent;
+	}
+}
+
+.title-border:after {
+	content: '';
+	height: 3px;
+	width: 80px;
+	position: absolute;
+	top: 30px;
+	left: 12px;
+	border: 1.5px solid rgba($primary, 0.15);
+	border-radius: 63px;
+}
+
+// Dark Mode Overrides
+body.dark {
+	background-color: $bg-dark;
+	color: $color-dark;
+}
+
+@each $color, $value in $dark-theme-colors {
+	body.dark .bg-#{$color} {
+		background-color: $value !important;
+	}
+}
+
+// Old Custom Styles
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.modal-footer > * {
+	margin: 0;
+}
+// .modal-dialog-scrollable .modal-content, .modal-dialog-scrollable .modal-body{ overflow: visible; }
+.nav.nav-tabs .nav-item.show:focus,
+.nav.nav-tabs .nav-item.show.active,
+.nav.nav-tabs .nav-link:focus,
+.nav.nav-tabs .nav-link.active {
+	background-color: transparent;
+}
+
+.media {
+	display: flex;
+	align-items: flex-start;
+}
+
+.media-body {
+	flex: 1;
+}
+.chat-box-right .chat-body .chat-detail .media .media-body .chat-msg p {
+	border-radius: 0.25rem;
+	text-align: justify;
+}
+
+.chat-box-right .chat-body .chat-detail .media .media-body .chat-msg.msg-right {
+	float: right;
+	text-align: right;
+	p {
+		text-align: right;
+	}
+	.msg-text {
+		text-align: justify;
+		text-align-last: right;
+	}
+}
+
+.chat-box-right .chat-body .chat-detail .media .media-body .chat-msg.msg-left {
+	float: left;
+	text-align: left;
+	p {
+		text-align: left;
+	}
+	.msg-text {
+		text-align: justify;
+		text-align-last: left;
+	}
+}
+
+.chat-box-right .chat-footer {
+	position: initial;
+}
+
+.owl-nav {
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0 !important;
+	width: 100%;
+	font-size: 40px;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background: initial !important;
+	color: initial !important;
+}
+.owl-prev {
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0 !important;
+	left: 0;
+}
+
+.owl-next {
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	margin: 0 !important;
+	right: 0;
+}
+
+.owl-carousel.owl-drag .owl-item {
+	height: 100%;
+}
+
+.owl-carousel-container {
+	height: 200px;
+}
+
+#offcanvas-container .offcanvas~.modal-backdrop{ z-index: 1040; }
+// @media (max-width: 768px) { .owl-carousel-container{ height: 150px; } }
+// @media (min-width: 768px) and (max-width: 992px) { .owl-carousel-container{ height: 200px; } }

@@ -1,0 +1,250 @@
+/*soft buttons*/
+
+.btn-soft-primary {
+	background-color: rgba($primary, 0.1);
+	color: $primary;
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($primary, 0.2);
+		background-color: rgba($primary, 0.8);
+		color: $white;
+	}
+}
+.btn-soft-secondary {
+	background-color: rgba($secondary, 0.15);
+	color: $secondary;
+	&:hover {
+		background-color: $secondary;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($secondary, 0.2);
+		background-color: rgba($secondary, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-success {
+	background-color: rgba($success, 0.1);
+	color: $success;
+	&:hover {
+		background-color: $success;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($success, 0.2);
+		background-color: rgba($success, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-warning {
+	background-color: rgba($warning, 0.18);
+	color: $warning;
+	&:hover {
+		background-color: $warning;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($warning, 0.2);
+		background-color: rgba($warning, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-danger {
+	background-color: rgba($danger, 0.1);
+	color: $danger;
+	&:hover {
+		background-color: $danger;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($danger, 0.2);
+		background-color: rgba($danger, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-info {
+	background-color: rgba($info, 0.1);
+	color: $info;
+	&:hover {
+		background-color: $info;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($info, 0.2);
+		background-color: rgba($info, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-dark {
+	background-color: rgba($dark, 0.1);
+	color: $dark;
+	&:hover {
+		background-color: $dark;
+		color: $gray-100;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($dark, 0.2);
+		background-color: rgba($dark, 0.8);
+		color: $gray-100;
+	}
+}
+
+.btn-soft-pink {
+	background-color: rgba($pink, 0.1);
+	color: $pink;
+	&:hover {
+		background-color: $pink;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($pink, 0.2);
+		background-color: rgba($pink, 0.8);
+		color: $white;
+	}
+}
+.btn-soft-purple {
+	background-color: rgba($purple, 0.1);
+	color: $purple;
+	&:hover {
+		background-color: $purple;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($purple, 0.2);
+		background-color: rgba($purple, 0.8);
+		color: $white;
+	}
+}
+
+.btn-soft-blue {
+	background-color: rgba($blue, 0.1);
+	color: $blue;
+	&:hover {
+		background-color: $blue;
+		color: $white;
+	}
+	&:focus {
+		box-shadow: 0 0 0 0.1rem rgba($blue, 0.2);
+		background-color: rgba($blue, 0.8);
+		color: $white;
+	}
+}
+
+// bg-soft
+
+.bg-soft-primary {
+	background-color: rgba($primary, 0.08) !important;
+	color: $primary !important;
+}
+
+.bg-soft-secondary {
+	background-color: rgba($secondary, 0.08) !important;
+	color: $secondary !important;
+}
+
+.bg-soft-success {
+	background-color: rgba($success, 0.08) !important;
+	color: $success !important;
+}
+
+.bg-soft-warning {
+	background-color: rgba($warning, 0.08) !important;
+	color: $warning !important;
+}
+
+.bg-soft-info {
+	background-color: rgba($info, 0.08) !important;
+	color: $info !important;
+}
+
+.bg-soft-danger {
+	background-color: rgba($danger, 0.08) !important;
+	color: $danger !important;
+}
+
+.bg-soft-pink {
+	background-color: rgba($pink, 0.08) !important;
+	color: $pink !important;
+}
+
+.bg-soft-purple {
+	background-color: rgba($purple, 0.08) !important;
+	color: $purple !important;
+}
+
+.bg-soft-blue {
+	background-color: rgba($blue, 0.08) !important;
+	color: $blue !important;
+}
+
+.bg-soft-dark {
+	background-color: rgba($dark, 0.08) !important;
+	color: $dark !important;
+}
+
+// Badge
+.badge {
+	box-shadow: none;
+	font-size: 11px !important;
+	&.badge-soft-primary {
+		background-color: rgba($primary, 0.15) !important;
+		color: $primary !important;
+		box-shadow: 0px 0px 13px 0px rgba($primary, 0.05);
+	}
+
+	&.badge-soft-secondary {
+		background-color: rgba($secondary, 0.15) !important;
+		color: $secondary !important;
+		box-shadow: 0px 0px 13px 0px rgba($secondary, 0.05);
+	}
+
+	&.badge-soft-success {
+		background-color: rgba($success, 0.15) !important;
+		color: $success !important;
+		box-shadow: 0px 0px 13px 0px rgba($success, 0.05);
+	}
+
+	&.badge-soft-warning {
+		background-color: rgba($warning, 0.15) !important;
+		color: $warning !important;
+		box-shadow: 0px 0px 13px 0px rgba($warning, 0.05);
+	}
+
+	&.badge-soft-info {
+		background-color: rgba($info, 0.15) !important;
+		color: $info !important;
+		box-shadow: 0px 0px 13px 0px rgba($info, 0.05);
+	}
+
+	&.badge-soft-danger {
+		background-color: rgba($danger, 0.15) !important;
+		color: $danger !important;
+		box-shadow: 0px 0px 13px 0px rgba($danger, 0.05);
+	}
+
+	&.badge-soft-pink {
+		background-color: rgba($pink, 0.15) !important;
+		color: $pink !important;
+		box-shadow: 0px 0px 13px 0px rgba($pink, 0.05);
+	}
+
+	&.badge-soft-purple {
+		background-color: rgba($purple, 0.15) !important;
+		color: $purple !important;
+		box-shadow: 0px 0px 13px 0px rgba($purple, 0.05);
+	}
+
+	&.badge-soft-dark {
+		background-color: rgba($dark, 0.15) !important;
+		color: $dark !important;
+		box-shadow: 0px 0px 13px 0px rgba($dark, 0.05);
+	}
+}

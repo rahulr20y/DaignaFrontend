@@ -1,0 +1,21 @@
+// Dark Mode Overrides
+body.dark .offcanvas {
+	color: $offcanvas-dark;
+	background-color: $offcanvas-bg-dark;
+}
+
+body.dark .offcanvas-start {
+	border-right: $offcanvas-border-width solid $offcanvas-border-dark;
+}
+
+body.dark .offcanvas-end {
+	border-left: $offcanvas-border-width solid $offcanvas-border-dark;
+}
+
+body.dark .offcanvas-top {
+	border-bottom: $offcanvas-border-width solid $offcanvas-border-dark;
+}
+
+body.dark .offcanvas-bottom {
+	border-top: $offcanvas-border-width solid $offcanvas-border-dark;
+}

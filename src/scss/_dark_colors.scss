@@ -1,0 +1,95 @@
+// PALETTE
+$primary-dark: #4638c2;
+$secondary-dark: #3a3c40;
+$success-dark: #45a164;
+$info-dark: #2586e7;
+$warning-dark: #e1a82d;
+$danger-dark: #c84949;
+$bg-light: $gray-100;
+$bg-dark: #121212;
+
+$dark-theme-colors: ();
+$dark-theme-colors: map-merge(
+	(
+		'primary': $primary-dark,
+		'secondary': $secondary-dark,
+		'success': $success-dark,
+		'info': $info-dark,
+		'warning': $warning-dark,
+		'danger': $danger-dark,
+		'light': $bg-light,
+		'dark': $bg-dark,
+	),
+	$dark-theme-colors
+);
+
+// TEXT
+$color-dark: rgba(255, 255, 255, 0.87);
+$text-color-dark: #ffffffcc;
+$white-dark: #ffffff;
+
+// BORDERS
+$border-color-dark: rgba(255, 255, 255, 0.075);
+
+// SURFACES
+$surface-dark-0: $gray-500;
+$surface-dark-1: $gray-600;
+$surface-dark-2: $gray-700;
+$surface-dark-3: $gray-800;
+$surface-dark-4: $gray-900;
+
+// CARD Variables
+$card-bg-dark: $surface-dark-4;
+$card-border-dark: $border-color-dark;
+$card-text-dark: $text-color-dark;
+
+// MODAL Variables
+$modal-bg-dark: $surface-dark-4;
+$modal-backdrop-bg-dark: $white-dark;
+$modal-border-dark: $border-color-dark;
+$modal-text-dark: $text-color-dark;
+
+// CLOSE Variables
+$btn-close-color-dark: $text-color-dark;
+
+// OFFCANVAS Variables
+$offcanvas-dark: $text-color-dark;
+$offcanvas-bg-dark: $surface-dark-4;
+$offcanvas-border-dark: $border-color-dark;
+
+// TOAST Variables
+$toast-dark: $text-color-dark;
+$toast-background-dark: $surface-dark-2;
+$toast-border-dark: $border-color-dark;
+$toast-header-dark: $white-dark;
+$toast-header-background-dark: $surface-dark-3;
+$toast-header-border-dark: $border-color-dark;
+
+// LIST GROUP Variables
+$list-group-dark: $color-dark;
+$list-group-bg-dark: $surface-dark-4;
+$list-group-border-dark: $border-color-dark;
+$list-group-disabled-bg-dark: $list-group-bg-dark;
+$list-group-active-dark: $white-dark;
+$list-group-active-bg-dark: $primary-dark;
+$list-group-action-dark: $color-dark;
+$list-group-action-hover-dark: $color-dark;
+$list-group-hover-bg-dark: rgba(255, 255, 255, 0.2);
+$list-group-action-active-dark: $color-dark;
+$list-group-action-active-bg-dark: rgba(255, 255, 255, 0.3);
+
+// FORM Variables
+$form-label-dark: #ffffffde;
+$form-text-dark: $form-label-dark;
+
+$input-dark: $color-dark;
+$input-bg-dark: rgba(255, 255, 255, 0.05);
+$input-border-dark: rgba(255, 255, 255, 0.09);
+$input-focus-border-dark: tint-color($primary-dark, 50%);
+$input-disabled-bg-dark: rgba(255, 255, 255, 0.01);
+
+$form-check-label-dark: $form-label-dark;
+$form-check-input-focus-border-dark: $input-focus-border-dark;
+$form-check-input-checked-bg-dark: $primary-dark;
+
+$form-range-track-bg-dark: $surface-dark-3;

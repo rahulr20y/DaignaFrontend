@@ -1,0 +1,8 @@
+// Dark Mode Overrides
+body.dark .btn-close {
+	color: $btn-close-color-dark;
+
+	&:hover {
+		color: $btn-close-color-dark;
+	}
+}

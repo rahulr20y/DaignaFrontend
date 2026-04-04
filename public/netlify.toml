@@ -1,0 +1,20 @@
+[[redirects]]
+  from = "/api/*"
+  to = "http://ec2-50-19-28-156.compute-1.amazonaws.com:5000/:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+	cache-control = '''
+	max-age=0,
+	no-cache,
+	no-store,
+	must-revalidate'''

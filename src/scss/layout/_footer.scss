@@ -1,0 +1,31 @@
+.footer {
+	border-top: 1px solid $border_2;
+	padding: 8px;
+	// position: absolute;
+	// bottom: 0;
+	// right: 0;
+	// left: 0;
+	color: $gray-600;
+	background-color: white;
+}
+
+[data-layout='horizontal'] {
+	display: inherit;
+	.footer {
+		.boxed-footer {
+			width: 1380px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	[data-layout='horizontal'] {
+		.footer {
+			.boxed-footer {
+				width: 100%;
+			}
+		}
+	}
+}

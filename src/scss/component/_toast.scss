@@ -1,0 +1,16 @@
+.toast {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+// Dark Mode Overrides
+body.dark .toast {
+	color: $toast-dark;
+	background-color: $toast-background-dark;
+	border: $toast-border-width solid $toast-border-dark;
+}
+
+body.dark .toast-header {
+	color: $toast-header-dark;
+	background-color: $toast-header-background-dark;
+	border-bottom: $toast-border-width solid $toast-header-border-dark;
+}

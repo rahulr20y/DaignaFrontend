@@ -1,0 +1,77 @@
+/* TABLE */
+.tabulator {
+	color: #303e67;
+	font-size: 13px;
+	border: 1px solid #eaf0f7;
+}
+.tabulator .tabulator-header {
+	font-weight: 500;
+	background-color: #f1f5fa;
+	border-bottom: 1px solid #eaf0f7;
+}
+.tabulator .tabulator-table {
+	font-weight: 400;
+}
+.tabulator .tabulator-cell {
+	height: 37px !important;
+	border-bottom: 1px solid #eaf0f7;
+}
+
+/* Tabulator Editor Style  */
+.tabulator-edit-select-list {
+	position: absolute;
+	display: inline-block;
+	box-sizing: border-box;
+	max-height: 200px;
+	background: #fff;
+	border: 1px solid #eaf0f7;
+	font-size: 13px;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	z-index: 10000;
+	border-radius: 0.25rem;
+	box-shadow: 1px 1px 2px #888;
+	font-family: 'Roboto', sans-serif;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-item {
+	padding: 4px;
+	color: #333;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-item.active {
+	color: #333;
+	background: whitesmoke;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-item.active.focused {
+	outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-item.focused {
+	outline: 1px solid whitesmoke;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-item:hover {
+	cursor: pointer;
+	color: #333;
+	background: whitesmoke;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-notice {
+	padding: 4px;
+	color: #333;
+	text-align: center;
+}
+
+.tabulator-edit-select-list .tabulator-edit-select-list-group {
+	border-bottom: 1px solid #ddd;
+	padding: 4px;
+	padding-top: 6px;
+	color: #333;
+	font-weight: bold;
+}
+
+.tabulator-header-filter input {
+	border-radius: 0.25rem;
+}
