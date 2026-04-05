@@ -29,7 +29,7 @@ function Createpride(props) {
       ...links.create_pride,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         if (res.status === 200) {
           props.setPride(res.data.data);
@@ -83,7 +83,7 @@ function Createpride(props) {
             <Editor
               editorState={editorState}
               onChange={setEditorState}
-              placeholder="Share with Bisara"
+              placeholder="Share with Daigna"
             />
           </div>
         }

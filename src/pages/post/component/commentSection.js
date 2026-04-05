@@ -9,8 +9,10 @@ import {
 } from "../../../common";
 import Comment from "./comment";
 import { connect } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function CommentSection(props) {
+  const { t } = useTranslation();
   const [comments, setComments] = React.useState([]);
   const [comment, setComment] = React.useState("");
   const [loading, setLoading] = React.useState(true);
@@ -49,7 +51,7 @@ function CommentSection(props) {
         console.log(res);
         if (res.status === 200) {
           setComments([res.data.data, ...comments]);
-          showAlertMessage("Comment Posted successfully", "success");
+          showAlertMessage(t("Comment Posted successfully"), "success");
         } else {
           showAlertMessage(res.data.message, "danger");
         }
@@ -72,7 +74,7 @@ function CommentSection(props) {
           setComments(
             comments.filter((comment) => comment.commentid !== commentid)
           );
-          showAlertMessage("Pride Deleted successfully", "success");
+          showAlertMessage(t("Comment Deleted successfully"), "success");
         } else {
           showAlertMessage(res.data.message, "danger");
         }

@@ -24,7 +24,7 @@ function WriteFeedback(props) {
       ...links.create_feedback,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         console.log(res);
         if (res.status === 200) {

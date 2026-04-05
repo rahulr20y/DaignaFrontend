@@ -57,7 +57,7 @@ function Familyform() {
       ...links.post_family,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         if (res.status === 200) {
           showAlertMessage("Family Posted successfully", "success");

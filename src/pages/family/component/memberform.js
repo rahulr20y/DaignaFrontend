@@ -36,7 +36,7 @@ function Memberform() {
       ...links.post_member,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         if (res.status === 200) {
           showAlertMessage("Member Posted successfully", "success");
