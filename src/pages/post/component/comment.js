@@ -18,11 +18,11 @@ function Comment(props) {
       <div className="bg-light p-2 w-100 border rounded">
         <div className="d-flex justify-content-between">
           <div className="mb-0 font-14">
-            {props.comment.user.first_name} {props.comment.user.last_name}{" "}
-            <span className="fw-lighter">@{props.comment.user.username}</span>
+            {props.comment?.user?.first_name} {props.comment?.user?.last_name}{" "}
+            <span className="fw-lighter">@{props.comment?.user?.username}</span>
           </div>
           <div>
-            {props.comment.user.username === props.profile.username && (
+            {props.comment?.user?.username === props.profile?.username && (
               <div className="btn-group">
                 <Button
                   text={<i className="bi bi-three-dots-vertical font-18"></i>}

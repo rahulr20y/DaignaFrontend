@@ -38,24 +38,24 @@ function Createpost(props) {
       ...links.create_post,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         console.log(res);
-        if (res.status === 200) {
-          props.setPost(res.data.data);
-          showAlertMessage(t("Posted successfully"), "success");
-          //editorState.clear();
-        } else {
-          showAlertMessage(res.data.message || t("Error creating post"), "danger");
-        }
-        setAddLoading(false);
-      },
-    });
-    var myModalEl = document.querySelector("#create_post");
-    var modal = window.bootstrap.Modal.getOrCreateInstance(myModalEl);
-    modal.hide();
-    // event.preventDefault();
-  }
+          if (res.status === 200) {
+            props.setPost(res.data.data);
+            showAlertMessage(t("Posted successfully"), "success");
+            // Only hide modal on success
+            var myModalEl = document.querySelector("#create_post");
+            var modal = window.bootstrap.Modal.getOrCreateInstance(myModalEl);
+            if (modal) modal.hide();
+          } else {
+            showAlertMessage(res.data.message || t("Error creating post"), "danger");
+          }
+          setAddLoading(false);
+        },
+      });
+      // event.preventDefault();
+    }
 
   return (
     <div>
@@ -66,12 +66,8 @@ function Createpost(props) {
             <div
               className="d-flex align-items-center"
               style={{ cursor: "pointer" }}
-              onClick={() => {
-                var myModalEl = document.querySelector("#create_post");
-                var modal =
-                  window.bootstrap.Modal.getOrCreateInstance(myModalEl); // Returns a Bootstrap modal instance
-                modal.show();
-              }}
+              data-bs-toggle="modal"
+              data-bs-target="#create_post"
             >
               <a className="user-avatar me-2">
                 <img
@@ -90,13 +86,14 @@ function Createpost(props) {
 
       <Modal
         modalId="create_post"
+        title={t("Create Post")}
         body={
           <div>
             <div style={{ height: "256px" }}>
               <Editor
                 editorState={editorState}
                 onChange={setEditorState}
-                placeholder="Share with Bisara"
+                placeholder={t("Share with Daigna")}
               />
             </div>
             <Elements
@@ -118,12 +115,7 @@ function Createpost(props) {
               variant="outline"
               text="Cancel"
               className="me-3"
-              onClick={() => {
-                var myModalEl = document.querySelector("#create_post");
-                var modal =
-                  window.bootstrap.Modal.getOrCreateInstance(myModalEl); // Returns a Bootstrap modal instance
-                modal.hide();
-              }}
+              dismiss="modal"
             />
             <Button text="Post" onClick={(e) => addPost(e, editorState)} />
           </>

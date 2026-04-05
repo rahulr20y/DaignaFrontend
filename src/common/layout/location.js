@@ -2,7 +2,7 @@ import React from "react";
 import {
   Button,
   Elements,
-  OffCanvas,
+  Offcanvas,
   debounce,
   links,
   API,
@@ -91,7 +91,7 @@ function Location(props) {
 				toggle='offcanvas'
 				target='location_offcanvas'
 			/> */}
-      {/* <OffCanvas
+      {/* <Offcanvas
 				id='location_offcanvas'
 				title='Location'
 				body={

@@ -12,7 +12,7 @@ position ['left', 'right', 'bottom', 'top'] default left
 
 */
 
-function OffCanvas(props) {
+function Offcanvas(props) {
 	return ReactDOM.createPortal(
 		<div
 			className={classnames('offcanvas', {
@@ -21,7 +21,7 @@ function OffCanvas(props) {
 				'offcanvas-top': props.position === 'top',
 				'offcanvas-start': !['right', 'bottom', 'top'].includes(props.position),
 			})}
-			tabindex='-1'
+			tabIndex='-1'
 			id={props.id}
 			aria-labelledby='offcanvasLabel'
 		>
@@ -42,4 +42,4 @@ function OffCanvas(props) {
 	)
 }
 
-export default OffCanvas
+export default Offcanvas

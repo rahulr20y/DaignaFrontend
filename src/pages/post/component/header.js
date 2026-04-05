@@ -23,15 +23,15 @@ function Header(props) {
           </a>
           <div>
             <h6 className="font-16 m-0">
-              {props.post.post.user.first_name} {props.post.post.user.last_name}{" "}
+              {props.post?.post?.user?.first_name} {props.post?.post?.user?.last_name}{" "}
             </h6>
             <p className="font-14 mb-0 fw-light">
-              @{props.post.post.user.username}
+              @{props.post?.post?.user?.username}
             </p>
           </div>
         </div>
         {props.deletePost != null &&
-          props.post.post.user.username === props.profile.username && (
+          props.post?.post?.user?.username === props.profile?.username && (
             <div className="btn-group">
               <Button
                 text={<i className="bi bi-three-dots-vertical font-18"></i>}

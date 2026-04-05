@@ -44,7 +44,7 @@ function CommentSection(props) {
       ...links.post_comment,
       urlparams: {},
       bodydata: bodyFormData,
-      isfile: false,
+      isfile: true,
       callback: (res) => {
         console.log(res);
         if (res.status === 200) {

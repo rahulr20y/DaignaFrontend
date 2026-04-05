@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Leftbar from "../../common/layout/leftbar";
 import Createpost from "./component/createpost";
 import { Editor, EditorState, convertToRaw } from "draft-js";
-import { API, links, showAlertMessage, Spinner } from "../../common/index";
+import { API, links, showAlertMessage, Spinner, AnimatedPage } from "../../common/index";
 import { useTranslation } from "react-i18next";
 import Post from "./../post/post";
 import SkeletonPost from "../post/SkeletonPost";
@@ -53,37 +53,39 @@ function Home(props) {
   }
 
   return (
-    <div>
-      <Createpost setPost={setPost} />
-      {loading ? (
-        <div className="py-2">
-          <SkeletonPost />
-          <SkeletonPost />
-          <SkeletonPost />
-        </div>
-      ) : (
-        <div>
-          {posts.length > 0 ? (
-            posts.map((post, i) => {
-              return (
-                <Post
-                  profile={props.profile}
-                  key={post.post.contentid}
-                  post={post}
-                  deletePost={deletePost}
-                  showComments={false}
-                />
-              );
-            })
-          ) : (
-            <div className="text-muted text-center p-4">
-              <i className="bi bi-chat-dots font-30 d-block mb-3"></i>
-              {t("No Posts Found !!!")}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+    <AnimatedPage>
+      <div>
+        <Createpost setPost={setPost} />
+        {loading ? (
+          <div className="py-2">
+            <SkeletonPost />
+            <SkeletonPost />
+            <SkeletonPost />
+          </div>
+        ) : (
+          <div>
+            {posts.length > 0 ? (
+              posts.map((post, i) => {
+                return (
+                  <Post
+                    profile={props.profile}
+                    key={post.post.contentid}
+                    post={post}
+                    deletePost={deletePost}
+                    showComments={false}
+                  />
+                );
+              })
+            ) : (
+              <div className="text-muted text-center p-4">
+                <i className="bi bi-chat-dots font-30 d-block mb-3"></i>
+                {t("No Posts Found !!!")}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </AnimatedPage>
   );
 }
 

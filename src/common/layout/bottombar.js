@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { connect } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
 import { menu } from "..";
@@ -23,14 +24,18 @@ function BottomBar(props) {
                     className={classnames(
                       "d-flex flex-column justify-content-center align-items-center text-decoration-none h-100",
                       {
-                        "text-dark fw-bold": location.pathname === item.to,
-                        "text-muted hover:text-gray-700":
-                          location.pathname !== item.to,
+                        "text-primary fw-bold": location.pathname === item.to,
+                        "text-muted": location.pathname !== item.to,
                       }
                     )}
                   >
-                    <i className={"font-20 flex-grow-1 bi bi-" + item.icon} />
-                    <span className="font-12 mt-0"> {item.name} </span>
+                    <motion.div
+                      whileTap={{ scale: 0.9 }}
+                      className="d-flex flex-column align-items-center"
+                    >
+                      <i className={"font-20 bi bi-" + item.icon} />
+                      <span className="font-10 mt-1"> {item.name} </span>
+                    </motion.div>
                   </NavLink>
                 </span>
               );

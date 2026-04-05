@@ -5,7 +5,7 @@ async function API(entity) {
 	const reduxState = store.getState()
 
 	const progress = (progressPercent, entity) => {
-		if (entity.isfile) {
+		if (entity.isfile && entity.uploadprogress) {
 			return entity.uploadprogress(progressPercent)
 		}
 	}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 // props
 // optional
@@ -14,7 +15,9 @@ import React from 'react'
 
 function Card(props) {
 	return (
-		<div
+		<motion.div
+			whileHover={{ y: -4 }}
+			transition={{ type: "spring", stiffness: 400, damping: 17 }}
 			className={
 				props.className !== undefined ? 'card ' + props.className : 'card '
 			}
@@ -64,7 +67,7 @@ function Card(props) {
 			) : (
 				<></>
 			)}
-		</div>
+		</motion.div>
 	)
 }
 

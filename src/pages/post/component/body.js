@@ -5,7 +5,7 @@ import Photogrid from "react-facebook-photo-grid";
 function Body(props) {
   return (
     <div className="mt-3">
-      <p className="font-14">{props.post.body}</p>
+      <p className="font-14">{props.post?.post?.body}</p>
       <div>
         {/* <FbImageLibrary
         images={[

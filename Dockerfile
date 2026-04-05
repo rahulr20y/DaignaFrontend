@@ -1,9 +1,12 @@
 # pull the base image
-FROM node:14-alpine AS development
+FROM node:18-alpine AS development
 ENV NODE_ENV development
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 # set the working direction
 WORKDIR /app
+
+RUN apk add --no-cache git
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
@@ -12,7 +15,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json .
 COPY package-lock.json .
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # add app
 COPY . .

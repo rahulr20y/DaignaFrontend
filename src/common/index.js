@@ -12,8 +12,8 @@ import Avatar from "./component/Avatar"
 import Steps from './component/Steps'
 import Tab from './component/Tab'
 import Spinner from './component/Spinner'
-import OffCanvas from './component/Offcanvas'
-
+import Offcanvas from './component/Offcanvas'
+import AnimatedPage from './component/AnimatedPage'
 import { menu } from './layout/menu'
 import ErrorBoundary from './errorBoundary'
 
@@ -44,7 +44,7 @@ export {
 	Steps,
 	Tab,
 	Spinner,
-	OffCanvas,
+	Offcanvas,
 	ErrorBoundary,
 	API,
 	links,
@@ -55,5 +55,5 @@ export {
 	debounce,
 	BottomBar,
 	Topbar,
-	
+	AnimatedPage,
 }

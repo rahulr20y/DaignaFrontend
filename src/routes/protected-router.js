@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import { Spinner, ErrorBoundary, Topbar, BottomBar } from "../common/index";
+import { AnimatePresence } from "framer-motion";
 import Leftbar from "../common/layout/leftbar";
 import Notification from "../pages/notification/notification";
 import { getRoutes, PageHead } from "./routes";
@@ -41,24 +42,26 @@ function ProtectedWebPage(props) {
               {pagehead()}
 
               <React.Suspense fallback={<Spinner />}>
-                <Switch>
-                  {routes.map((route, idx) => {
-                    return (
-                      route.component && (
-                        <Route
-                          key={idx}
-                          path={route.path}
-                          exact={route.exact}
-                          name={route.name}
-                          render={(props) => (
-                            <route.component {...route.props} />
-                          )}
-                        />
-                      )
-                    );
-                  })}
-                  {/* <Redirect from="/" to="/" /> */}
-                </Switch>
+                <AnimatePresence exitBeforeEnter>
+                  <Switch location={location} key={location.pathname}>
+                    {routes.map((route, idx) => {
+                      return (
+                        route.component && (
+                          <Route
+                            key={idx}
+                            path={route.path}
+                            exact={route.exact}
+                            name={route.name}
+                            render={(props) => (
+                              <route.component {...route.props} />
+                            )}
+                          />
+                        )
+                      );
+                    })}
+                    {/* <Redirect from="/" to="/" /> */}
+                  </Switch>
+                </AnimatePresence>
               </React.Suspense>
             </ErrorBoundary>
           </div>

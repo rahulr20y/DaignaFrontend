@@ -1,7 +1,7 @@
 import React from 'react'
 import {
 	Button,
-	OffCanvas,
+	Offcanvas,
 	Elements,
 	debounce,
 	links,
@@ -62,7 +62,7 @@ function Search(props) {
 				toggle='offcanvas'
 				target='search_offcanvas'
 			/>
-			<OffCanvas
+			<Offcanvas
 				id='search_offcanvas'
 				position='right'
 				title='Search'

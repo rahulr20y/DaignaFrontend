@@ -3,5 +3,5 @@ export const generalstate = {
   token: {},
   location: {},
   group: [],
-  brandname: "Diagna Village Social",
+  brandname: "Daigna Village Social",
 };

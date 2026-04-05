@@ -83,8 +83,9 @@ function Button(props) {
 			form={props.form !== undefined ? props.form : null}
 			ref={props.forwardedRef !== undefined ? props.forwardedRef : null}
 			title={props.title !== undefined ? props.title : null}
-			data-bs-toggle={props.toggle ? props.toggle : 'modal'}
+			data-bs-toggle={props.toggle ? props.toggle : null}
 			data-bs-target={props.target ? '#' + props.target : null}
+			data-bs-dismiss={props.dismiss ? props.dismiss : null}
 			aria-controls={props.target ? props.target : null}
 		>
 			{props.loading === true ? <Spinner size='sm' className='me-1' /> : <></>}

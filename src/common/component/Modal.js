@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 // Props:
 // Title
@@ -6,8 +6,37 @@ import ReactDOM from "react-dom";
 // Footer
 // ModalId
 function Modal(props) {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    if (window.bootstrap && modalRef.current) {
+      // Initialize the modal once
+      const modalInstance = new window.bootstrap.Modal(modalRef.current);
+      
+      // Manual click handler for close buttons to ensure it works across all environments
+      const handleCloseClick = (e) => {
+        if (e.target.closest('[data-bs-dismiss="modal"]')) {
+           const modal = window.bootstrap.Modal.getInstance(modalRef.current);
+           if (modal) modal.hide();
+        }
+      };
+
+      modalRef.current.addEventListener('click', handleCloseClick);
+      return () => {
+        if (modalRef.current) {
+          modalRef.current.removeEventListener('click', handleCloseClick);
+        }
+      }
+    }
+  }, []);
+
   return ReactDOM.createPortal(
-    <div id={props.modalId} className="modal fade" tabIndex={-1}>
+    <div
+      id={props.modalId}
+      className="modal fade"
+      tabIndex={-1}
+      ref={modalRef}
+    >
       <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         {/* <div className="modal-content"> */}
         <div
