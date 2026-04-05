@@ -24,17 +24,17 @@ function BottomBar(props) {
                     className={classnames(
                       "d-flex flex-column justify-content-center align-items-center text-decoration-none h-100",
                       {
-                        "text-primary fw-bold": location.pathname === item.to,
-                        "text-muted": location.pathname !== item.to,
+                        "active-nav": location.pathname === item.to,
+                        "text-muted opacity-70": location.pathname !== item.to,
                       }
                     )}
                   >
                     <motion.div
-                      whileTap={{ scale: 0.9 }}
-                      className="d-flex flex-column align-items-center"
+                      whileTap={{ scale: 0.85 }}
+                      whileHover={{ y: -2 }}
+                      className="d-flex flex-row align-items-center justify-content-center p-2 rounded-pill h-100"
                     >
-                      <i className={"font-20 bi bi-" + item.icon} />
-                      <span className="font-10 mt-1"> {item.name} </span>
+                      <i className={"font-24 bi bi-" + (location.pathname === item.to ? item.activeIcon || item.icon + '-fill' : item.icon)} />
                     </motion.div>
                   </NavLink>
                 </span>

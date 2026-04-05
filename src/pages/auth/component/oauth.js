@@ -23,13 +23,18 @@ function OAuth(props) {
       <div
         key={innerData.name + " " + btn_on}
         className={classnames(
-          "d-flex w-75 btn waves-effect waves-light mx-auto mb-2 border",
+          "d-flex w-100 btn waves-effect waves-light mx-auto mb-3 border align-items-center justify-content-center",
           {
-            "hover:bg-gray-100 shadow-sm": !btn_on,
+            "shadow-sm": !btn_on,
             disabled: btn_on,
           }
         )}
-        style={{ height: "40px" }}
+        style={{ 
+          padding: "10px 20px", 
+          borderRadius: "12px",
+          backgroundColor: "#fff",
+          borderColor: "#e2e8f0"
+        }}
         onClick={() => {
           setLoading(true);
           API({
@@ -41,7 +46,6 @@ function OAuth(props) {
             },
             isfile: false,
             callback: (res) => {
-              //console.log(res.data.data)
               if (res.status === 200) {
                 setLoading(false);
                 localStorage.setItem("enable_meet", false);
@@ -55,15 +59,15 @@ function OAuth(props) {
           });
         }}
       >
-        <div className="h-100">
+        <div style={{ height: "24px", width: "24px", marginRight: "12px" }}>
           <img
-            className="h-100"
+            className="h-100 w-100"
             src={innerData.img}
             alt={`${innerData.name}-logo`}
           />
         </div>
-        <div className="w-100">
-          <b>Log in with {innerData.name}</b>
+        <div className="text-dark font-15" style={{ fontFamily: "Outfit, sans-serif", fontWeight: "500" }}>
+          Continue with {innerData.name}
         </div>
       </div>
     );

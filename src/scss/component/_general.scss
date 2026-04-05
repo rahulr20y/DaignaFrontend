@@ -54,10 +54,16 @@
 	border-radius: 63px;
 }
 
+body {
+	background-color: #f8fafc;
+	color: #1e293b;
+	font-family: $font-primary;
+}
+
 // Dark Mode Overrides
 body.dark {
-	background-color: $bg-dark;
-	color: $color-dark;
+	background-color: #0f172a;
+	color: #f8fafc;
 }
 
 @each $color, $value in $dark-theme-colors {

@@ -1,8 +1,9 @@
 const menu = [
-  { name: "Home", icon: "house", to: "/app/", mobile: true, web: true },
+  { name: "Home", icon: "house", activeIcon: "house-fill", to: "/app/", mobile: true, web: true },
   {
     name: "Pride",
     icon: "patch-plus",
+    activeIcon: "patch-plus-fill",
     to: "/app/pride",
     mobile: true,
     web: true,
@@ -10,6 +11,7 @@ const menu = [
   {
     name: "Profile",
     icon: "person",
+    activeIcon: "person-fill",
     to: "/app/profile/self",
     mobile: false,
     web: true,
@@ -17,6 +19,7 @@ const menu = [
   {
     name: "Notification",
     icon: "bell",
+    activeIcon: "bell-fill",
     to: "/app/notification",
     mobile: true,
     web: false,
@@ -24,6 +27,7 @@ const menu = [
   {
     name: "Feedback",
     icon: "envelope-open",
+    activeIcon: "envelope-open-fill",
     to: "/app/feedback",
     mobile: true,
     web: true,
@@ -31,6 +35,7 @@ const menu = [
   {
     name: "Family",
     icon: "house",
+    activeIcon: "house-fill",
     to: "/app/family",
     mobile: true,
     web: true,
@@ -38,6 +43,7 @@ const menu = [
   {
     name: "About",
     icon: "info-square",
+    activeIcon: "info-square-fill",
     to: "/app/about",
     mobile: true,
     web: true,

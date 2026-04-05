@@ -73,8 +73,9 @@ function Topbar(props) {
 						<i className='bi bi-bell mx-2' />
 					</NavLink> */}
         <div>
-          <h5>{t(props.brandname)}</h5>
-          {/* {t("Welcome to React")} */}
+          <h2 className="text-gradient font-premium mb-0" style={{ fontSize: '24px' }}>
+            {t(props.brandname)}
+          </h2>
         </div>
 
         <div className="d-flex">

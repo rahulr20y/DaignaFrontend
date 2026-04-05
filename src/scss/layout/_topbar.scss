@@ -1,11 +1,13 @@
 #bottombar-nav,
 #topbar-nav {
-	height: 56px;
-	background-color: rgba($white, 0.8) !important;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	height: 64px;
+	background-color: rgba(255, 255, 255, 0.7) !important;
+	backdrop-filter: blur(20px) saturate(180%);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
 	width: 100%;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	z-index: 1000;
 }
 
 body.dark #topbar-nav {

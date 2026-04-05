@@ -60,6 +60,23 @@
 	font-size: 40px !important;
 }
 
-.text-dark-alt {
-	color: lighten($dark, 10%) !important;
+.font-premium {
+	font-family: $font-secondary;
+	letter-spacing: -0.02em;
+	font-weight: 600;
+}
+
+.text-gradient {
+	background: linear-gradient(135deg, $primary 0%, $violet 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.text-subtle {
+	color: #64748b;
+}
+
+.text-main {
+	color: #1e293b;
 }
